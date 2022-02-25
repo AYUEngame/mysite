@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container">
+
+        <div style="margin-bottom: 10px">
+            {#   href="/depart/add/"          target="_blank"表示保留当前页面，新页面打开。#}
+            <a class="btn btn-info" href="/admin/add/">新建管理员</a>
+        </div>
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">管理员列表</div>
+
+            <!-- Table 加上边框 -->
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>账号</th>
+                    <th>密码</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for obj in admin_data %}
+                    <tr>
+                        <th>{{ obj.id }}</th>
+                        <td>{{ obj.name }}</td>
+                        <td>{{ obj.admin}}</td>
+                        <td>{{ obj.password }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="/admin/{{ obj.id }}/edit">编辑</a>
+                            <a class="btn btn-danger" href="/admin/{{ obj.id }}/delete">删除</a>
+                            {# 两个按钮#}
+                        </td>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+{% endblock %}

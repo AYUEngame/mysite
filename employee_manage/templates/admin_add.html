@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">新建管理员</h3>
+                </div>
+
+                <div class="panel-body">
+                    {#  Panel content改用表单#}
+{#                    novalidate关闭浏览器的校验#}
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        {% for foo in form %}
+                            <div calss="form-group">
+                                {{ foo.label }}:{{ foo }}
+                                {#        字典样一一对应,错误信息有很多，错误显示人性化只显示第一个#}
+                                <span style="color:red">{{ foo.errors.0 }}</span>
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-success">保存</button>
+                        <span style="color: red;">{{ error_msg }}</span>
+                    </form>
+                    {#                表单内容#}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
