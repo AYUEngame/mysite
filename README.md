@@ -60,7 +60,6 @@ CREATE DATABASE myweb；
 ```
 b.因为终端下执行需要找到manage.py文件，可以使用pycharm：tools-run manage.py：
 
-![py _migrate](IMG/py _migrate.png)
 ```
 ./makemigrations
 ./migrate
