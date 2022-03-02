@@ -157,7 +157,7 @@ class AdminInfo(models.Model):
 ## error
 - login界面展示
 ![login](IMG/login_list.png)
-- 自己也在试着分析，但是目前还没有找到原因。如果哥哥有时间也可以帮我下撒。
+- 目前已解决：login.html<input>中缺少一个name字段，post无法借此传输数据到view函数
 
 
 ### 附件（一些知识积累）
