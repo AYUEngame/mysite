@@ -11,9 +11,6 @@
 - [对员工信息的增删改查](#UserInfo)
 - [对管理员信息的增删改查](#Admin)
 
-## 遇到的问题
-- [login登录界面内，账号密码即使比对成功也不进行跳转](#error)
-
 ## 安装
 - Mysql安装具体请参考 [mysql](https://www.mysql.com/)。
 - pycharm安装具体请参考 [pycharm](https://www.jetbrains.com/pycharm/)。
